@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Social Media Bindings
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://github.com/CaptainLugaru" rel="me">
+    <link href="https://www.asei.systems/our-team" rel="me">
+    <link href="https://gervi-hera-vitr.github.io/sindri-labs/" rel="me">
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Captain Lugaru - Homeschooled Software Engineer</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="15-year-old homeschooled software engineer learning Python, Kotlin, AI, and machine learning. Helps design curriculum and works on real projects with ASE Inc and Gotham-Village.">
+    <meta name="author" content="Anton Kuhay">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS: Inline
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <style>
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; margin: 0; }
+
+        /* Container Grid */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .row { display: flex; flex-wrap: wrap; margin: 0 -10px; }
+        .twelve.columns { flex: 1; padding: 0 10px; }
+
+        body {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            color: white;
+            font-family: "Raleway", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero h2 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-section {
+            background: rgba(255,255,255,0.08);
+            border-left: 4px solid #3498db;
+            padding: 2rem;
+            margin: 3rem auto;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .experience {
+            background: rgba(255,255,255,0.03);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .learning-category {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .learning-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .learning-category h4 {
+            color: #3498db;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-list li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .projects-section {
+            background: rgba(0,0,0,0.3);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0.8rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(52,152,219,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52,152,219,0.4);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.6);
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0.8rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .journey-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 0.8rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .intern-badge {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(52,152,219,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .intro-section { padding: 1.5rem; margin: 2rem auto; font-size: 1rem; }
+            .learning-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .journey-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .stat { padding: 1.5rem; }
+            .stat-number { font-size: 2rem; }
+            .btn-primary, .btn-secondary { display: block; margin: 0.5rem auto; max-width: 280px; }
+        }
+
+        @media (max-width: 480px) {
+            .journey-stats { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+
+    <!-- Global site tag (gtag.js) - Google Analytics
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT5NJ86878"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-FT5NJ86878');
+    </script>
+
+</head>
+<body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="intern-badge">Homeschooled Software Engineer • ASE Inc Intern</div>
+
+                <h1>Captain Lugaru</h1>
+
+                <h2>Learning Python, Kotlin, AI, and machine learning while helping design curriculum and working on real projects</h2>
+
+                <div class="intro-section">
+                    Homeschooled by my dad (Vadim/rdd13r) with a curriculum I help design. Learning through real-world projects including AI/ML, Minecraft modding, and business applications. Currently working with ASE Inc and contributing to Gotham-Village projects.
+                </div>
+
+                <a href="https://github.com/CaptainLugaru" class="btn-primary">View GitHub Profile</a>
+                <a href="https://gervi-hera-vitr.github.io/sindri-labs/" target="_blank" class="btn-secondary">Check Out Our Homeschool</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="journey-stats">
+        <div class="stat">
+            <span class="stat-number">15</span>
+            <div class="stat-label">Years Old</div>
+        </div>
+        <div class="stat">
+            <span class="stat-number">Python</span>
+            <div class="stat-label">Primary Language Learning</div>
+        </div>
+        <div class="stat">
+            <span class="stat-number">AI/ML</span>
+            <div class="stat-label">Core Interest & Study</div>
+        </div>
+        <div class="stat">
+            <span class="stat-number">Real</span>
+            <div class="stat-label">Project Experience</div>
+        </div>
+    </div>
+
+    <div class="experience">
+        <div class="row">
+            <div class="twelve columns">
+                <h3 style="text-align: center; margin-bottom: 3rem;">Current Learning & Development</h3>
+
+                <div class="learning-grid">
+                    <div class="learning-category">
+                        <h4>Programming Skills</h4>
+                        <ul class="skill-list">
+                            <li>Python development (primary)</li>
+                            <li>Kotlin learning (JetBrains Academy)</li>
+                            <li>Java (Minecraft modding)</li>
+                            <li>Machine Learning fundamentals</li>
+                            <li>Git version control</li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-category">
+                        <h4>Academic Studies</h4>
+                        <ul class="skill-list">
+                            <li>Philosophy and formal logic</li>
+                            <li>Mathematics (algebra to calculus)</li>
+                            <li>Scientific method</li>
+                            <li>Curriculum design participation</li>
+                            <li>Independent research projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-category">
+                        <h4>Projects & Applications</h4>
+                        <ul class="skill-list">
+                            <li>Minecraft modding projects</li>
+                            <li>AI/ML model training</li>
+                            <li>Website development</li>
+                            <li>Gotham-Village contributions</li>
+                            <li>Educational content creation</li>
+                        </ul>
+                    </div>
+
+                    <div class="learning-category">
+                        <h4>Business Experience</h4>
+                        <ul class="skill-list">
+                            <li>ASE Inc intern work</li>
+                            <li>Real client project exposure</li>
+                            <li>Business documentation</li>
+                            <li>Educational website maintenance</li>
+                            <li>Content organization systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-section">
+        <div class="row">
+            <div class="twelve columns">
+                <h3>Real-World Learning & Projects</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Homeschooled with a curriculum I help design, focusing on real-world applications. Currently working on AI/ML projects, Minecraft modding, educational content, and contributing to adult hacker communities.
+                </p>
+
+                <p style="margin-bottom: 2rem;">
+                    ✓ Homeschooled by experienced enterprise architect<br>
+                    ✓ AI/ML curriculum through google-ai-labs<br>
+                    ✓ Contributing to Gotham-Village projects<br>
+                    ✓ Creating Munchkin programming content<br>
+                    ✓ Working with ASE Inc on real business projects
+                </p>
+
+                <a href="https://github.com/CaptainLugaru" class="btn-primary">GitHub Profile</a>
+                <a href="https://gervi-hera-vitr.github.io/sindri-labs/" class="btn-secondary">Homeschool Site</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="twelve columns">
+                <p><strong>Captain Lugaru</strong> • Homeschooled Software Engineer & ASE Inc Intern</p>
+                <p>
+                    <a href="https://github.com/CaptainLugaru" style="color: #3498db;">GitHub</a> •
+                    <a href="https://gervi-hera-vitr.github.io/sindri-labs/" style="color: #3498db;">Homeschool</a> •
+                    <a href="mailto:anton@asei.systems" style="color: #3498db;">Contact</a>
+                </p>
+                <p><em>"Learning through real projects and self-designed curriculum, not just textbooks."</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', () => document.body.className = document.body.className.replace(/\bis-preload\b/, ''));
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
